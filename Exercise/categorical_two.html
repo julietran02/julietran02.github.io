@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Categorical Data Viz 2</title>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="categorical_one.html" class="activechild">Categorical</a></li>
+                </ul>
+            </nav>
+            <div class="logotext">
+                <img src="image/logo.png" alt="Logo">
+                <h1>The Visualization Menagerie</h1>
+            </div>
+        </header>
+
+        <main>
+            <h2>How do we display data for multiple categories?</h2>
+            <p>Sometimes we are interested in looking at how who two categories intersect each with other,
+                or we may want to determine how multiple categories interact. Are there groups in the data?
+                Can we find patterns? Let's explore below!</p>
+
+            <section>
+                <h3>Comparing across two categories</h3>
+                <p>If you think elected officials are more like you, do you trust the President more?
+                    The data set we are considering from fivethirtyeight asked participants to rate how similar they
+                    think elected officials are to themselves on a four point scale, and additionally how much they
+                    trust the President on a four point scale (it's probably worth mentioning that this data was
+                    collected in 2020). Let's check out two visualizations that show this data.
+                </p>
+                <img src="image/two_cat.svg" alt="stacked bar and heatmap" class="scalesvg">
+
+                <p>When figuring out which visualization we want to use, we need to consider what we want to draw the
+                    viewer's attention to. In the <dfn>stacked bar chart</dfn>, each bar represents one of the potential
+                    answers to the question: How many people in elected office are like you? The chunks of each vertical
+                    bar show the percentage of people who gave that answer who fit into each of the categories of
+                    trusting the President. For example, we see that of those who think only a few elected officials are
+                    like them, 37% do not trust the President at all. One trend really stands out on the stacked bar
+                    chart: the darkest blue chunk gets larger the more people think elected officials are like them…that
+                    is,
+                    they trust the President MORE.
+                </p>
+
+                <p>The <dfn>heatmap</dfn> is really a glorified table: it is showing the same percentages described
+                    above, i.e. the proportion in each group of perceived likeness that fall into each level of trusting
+                    the President. The thing that draws our eye first is the darkest blue block in the top left. This
+                    might be confusing for viewers…at first glance, we might think 46% is the largest value in the
+                    data…but all of those percentages add up to way more than 100%!!! We would definitely need to add
+                    some text to explain that the percentages in each column add up to 100%. It’s a lot for the viewer
+                    to take in, and the bar chart seems easier to understand. A heatmap would work better if we wanted
+                    to show percentages out of the total. What if we have more than two categories?
+                </p>
+            </section>
+
+            <section>
+                <h3>Viewing multiple categories in parallel</h3>
+                <div id="imagebox">
+                    <img src="image/categories.html" alt="parcats plot" id="imgleft" srcset="image/categories_small.png 480w,
+                            image/categories_medium.png 1280w" sizes="90vw">
+                    <p> 
+                        A <dfn>parallel categories plot</dfn> shows how observations flow across categories. They can be
+                        difficult to read if you've never seen one before! We see how groups of individuals with the
+                        same characteristics are distributed over the categories. These plots work well if there are
+                        major differences in the groupings. We can also see the relative numbers of individuals in each
+                        combined group but also each individual group. Notice that there were actually very
+                        FEW people overall who said there were a lot of elected officials like them - most people said
+                        only a few elected officials were like them.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p class="navhelper">
+                Want to review what to do for one variable? Click <a href="categorical_one.html">HERE</a>
+            </p>
+            <address>Copyright 2024 by Md Mahfuz Ibn Alam</a></address>
+        </footer>
+
+    </body>
+
+</html>
